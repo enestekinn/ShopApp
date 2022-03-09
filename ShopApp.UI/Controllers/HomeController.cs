@@ -6,9 +6,9 @@ namespace ShopApp.UI.Controllers
     public class HomeController : Controller
     {
         // localhost:5000/home/action
-        public string Index()
+        public string Index(int id)
         {
-            return "home/index";
+            return "home/index/"+id;
         }
         
     }

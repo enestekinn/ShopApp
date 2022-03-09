@@ -4,9 +4,9 @@ namespace ShopApp.UI.Controllers
 {
     public class ProductController: Controller
     {
-        public string list()
+        public string Index()
         {
-            return "product/list";
+            return "product/index";
         }
         
     }
