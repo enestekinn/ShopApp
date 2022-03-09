@@ -11,7 +11,12 @@
 @await Html.PartialAsync("_header")
 <partial name="_header"></partial>
 
+
+
 <h1>@ViewData["Category"]</h1>
 <h4>@(((Product) ViewData["Product"]).Name)</h4>
+
+                @await  Component.InvokeAsync("Categories")
+
 </body>
 </html>

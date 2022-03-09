@@ -5,8 +5,4 @@
         <DockerDefaultTargetOS>Windows</DockerDefaultTargetOS>
     </PropertyGroup>
 
-    <ItemGroup>
-      <Folder Include="ViewComponents" />
-    </ItemGroup>
-
 </Project>

@@ -17,17 +17,10 @@ namespace ShopApp.UI.Controllers
                 new Product {Name = "Samsung S5", Price = 5000, Description = "guzel"}
             };
 
-            var categories = new List<Category>()
-            {
-                new Category {Name = "Telefonlar", Description = "Telefonlar"},
-                new Category {Name = "Bilgisayar", Description = "Bilgisayar"},
-                new Category {Name = "Elektronik", Description = "Elektronik"}
-
-            };
+        
 
             var productViewModel = new ProductViewModel()
             {
-                Categories = categories,
                 Products = products
             };
 
