@@ -1,14 +1,38 @@
+using System;
+using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
+using ShopApp.UI.Models;
+using ShopApp.UI.ViewModels;
 
 namespace ShopApp.UI.Controllers
 {
-    // localhost:5000/home
     public class HomeController : Controller
     {
-        // localhost:5000/home/action
-        public string Index(int id)
+        public IActionResult Index(int id)
         {
-            return "home/index/"+id;
+            var products = new List<Product>()
+            {
+                new Product {Name = "Samsung S4", Price = 2000, Description = "iyi telefon"}, 
+                new Product {Name = "Samsung S5", Price = 5000, Description = "guzel"},
+                new Product {Name = "Samsung S5", Price = 5000, Description = "guzel"},
+                new Product {Name = "Samsung S5", Price = 5000, Description = "guzel"}
+            };
+
+            var categories = new List<Category>()
+            {
+                new Category {Name = "Telefonlar", Description = "Telefonlar"},
+                new Category {Name = "Bilgisayar", Description = "Bilgisayar"},
+                new Category {Name = "Elektronik", Description = "Elektronik"}
+
+            };
+
+            var productViewModel = new ProductViewModel()
+            {
+                Categories = categories,
+                Products = products
+            };
+
+            return View(productViewModel);
         }
         
     }

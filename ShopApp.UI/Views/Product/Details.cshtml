@@ -1,0 +1,17 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+@await Html.PartialAsync("_navbar")
+@await Html.PartialAsync("_header")
+<partial name="_header"></partial>
+
+<h1>@ViewData["Category"]</h1>
+<h4>@(((Product) ViewData["Product"]).Name)</h4>
+</body>
+</html>
