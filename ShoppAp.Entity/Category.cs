@@ -1,9 +1,8 @@
-namespace ShopApp.UI.Models
+namespace ShoppAp.Entity
 {
     public class Category
     {
         public int CategoryId { get; set; }
         public string Name { get; set; }
-        public string Description { get; set; }
     }
 }

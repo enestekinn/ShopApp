@@ -1,4 +1,3 @@
-@using ShopApp.UI.Views.Shared
 @model ShopApp.UI.ViewModels.ProductViewModel
 
 
@@ -21,7 +20,7 @@ else
     <div class="row">                  
         @foreach (var product in products)
         {    
-            <div class="col-md-3">
+            <div class="col-md-4">
                 @await Html.PartialAsync("_product", product)   
             </div>       
         }   

@@ -11,48 +11,54 @@
 </head>
 <body>
 
-@if (IsSectionDefined("MessageBox"))
-{
-    @RenderSection("MessageBox");
 
+@if(IsSectionDefined("MessageBox"))
+{
+    @RenderSection("MessageBox")
 }
 else
 {
-    <div class="alert alert-success text-center m-0">
-Welcome!
+    <div class="alert alert-primary text-center m-0">
+        Welcome!
     </div>
 }
-@if (IsSectionDefined("Categories"))
-{
-    <div class="row">
-    <div class="col-md-3">
-        @RenderSection("Categories",false)
-    </div>
-    <div class="col-md-9">
-        @RenderBody()
-    </div>
-</div>
-
-}
-else
-{
-    <div class="row">
-        <div class="col-md-12">
-            @RenderBody()
-        </div>
-    </div>
-}
-
 
 @await Html.PartialAsync("_navbar")
-<partial name="_header"/>
-<main>
-    <div class="container">
+@RenderSection("Header",false)
 
-        @RenderBody()
 
+<main class="my-3">
+    <div class="container"> 
+
+        @if(IsSectionDefined("Categories"))
+        {
+            <div class="row">
+                <div class="col-md-3">
+                    @RenderSection("Categories",false)
+                </div>
+                <div class="col-md-9">
+                    @RenderBody()
+                </div>
+            </div>
+        }   
+        else
+        {
+            <div class="row">
+                <div class="col-md-12">
+                    @RenderBody()
+                </div>
+            </div>   
+        }
+            
     </div>
 </main>
 
+<footer class="py-5 bg-dark text-white text-center">
+    Shop App | 2020
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+
+@RenderSection("Scripts",false)
 </body>
 </html>

@@ -2,6 +2,10 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShopApp.UI", "ShopApp.UI\ShopApp.UI.csproj", "{C1C05FD4-66E2-4AE3-BF33-74D10053130D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShoppAp.Entity", "ShoppAp.Entity\ShoppAp.Entity.csproj", "{C0A600DA-E64B-454C-B945-57A6DA8459B5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShoppApp.DataAccess", "ShoppApp.DataAccess\ShoppApp.DataAccess.csproj", "{31998F3A-8FC3-4896-86C9-30F2950474F3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +16,13 @@ Global
 		{C1C05FD4-66E2-4AE3-BF33-74D10053130D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C1C05FD4-66E2-4AE3-BF33-74D10053130D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C1C05FD4-66E2-4AE3-BF33-74D10053130D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C0A600DA-E64B-454C-B945-57A6DA8459B5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C0A600DA-E64B-454C-B945-57A6DA8459B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C0A600DA-E64B-454C-B945-57A6DA8459B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C0A600DA-E64B-454C-B945-57A6DA8459B5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{31998F3A-8FC3-4896-86C9-30F2950474F3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{31998F3A-8FC3-4896-86C9-30F2950474F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{31998F3A-8FC3-4896-86C9-30F2950474F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{31998F3A-8FC3-4896-86C9-30F2950474F3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

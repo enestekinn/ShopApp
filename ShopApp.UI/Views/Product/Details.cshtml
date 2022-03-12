@@ -1,22 +1,24 @@
+@model Product
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+@section Categories{
+    @await Component.InvokeAsync("Categories")
 
-@await Html.PartialAsync("_navbar")
-@await Html.PartialAsync("_header")
-<partial name="_header"></partial>
+}
 
+<div class="card mb-3">
+    <div class="card-body">
 
-
-<h1>@ViewData["Category"]</h1>
-<h4>@(((Product) ViewData["Product"]).Name)</h4>
-
-                @await  Component.InvokeAsync("Categories")
-
-</body>
-</html>
+        <div class="row no-gutters">
+            <div class="col-md-3">
+                <img src="~/img/@Model.ImageUrl" class="card-img">
+            </div>
+            <div class="col-md-9">
+                <h5 class="card-title">@Model.Name</h5>
+                <p class="card-text">@Model.Description</p>
+                <p class="card-text">
+                    <smal class="text-muted">3 days ago</smal>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>

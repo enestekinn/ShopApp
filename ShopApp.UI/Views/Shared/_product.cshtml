@@ -1,10 +1,20 @@
 @model Product                        
-<div class="card">
-    <img src="~/img/1.jpg" alt="" class="card-img-top">
-    
-                            <div class="card-body">
-                                <h5 class="card-title">@Model.Name</h5>
-                                <p class="card-text">@Model.Description</p>
-                                <a href="" class="btn btn-primary">Incele</a>
-                            </div>
-                        </div>
+<div class="card mb-2">
+    <img src="~/img/@Model.ImageUrl" alt="" class="card-img-top">
+
+    <div class="card-body">
+        <h5 class="card-title">@Model.Name</h5>
+        <p class="card-text">@Model.Description</p>
+
+
+        <a asp-controller="Product" asp-action="Details" asp-route-id="@Model.ProductId" class="btn btn-primary btn-sm">Incele</a>
+        <a asp-controller="Product" asp-action="Edit" asp-route-id="@Model.ProductId" class="btn btn-primary btn-sm">Edit</a>
+
+        <form method="POST" action="/product/delete" style="display: inline;">
+            <input type="hidden" name="ProductId" value="@Model.ProductId"/>
+            <button type="submit" class="btn btn-danger btn-sm">Delete</button>
+        </form>
+
+
+    </div>
+</div>

@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
+using ShopApp.UI.Data;
 using ShopApp.UI.Models;
 
 namespace ShopApp.UI.ViewComponents
@@ -8,14 +9,13 @@ namespace ShopApp.UI.ViewComponents
     {
         public IViewComponentResult Invoke()
         {
-            var categories = new List<Category>()
+            if (RouteData.Values["action"].ToString() == "list")
             {
-                new Category {Name = "Telefonlar", Description = "Telefonlar"},
-                new Category {Name = "Bilgisayar", Description = "Bilgisayar"},
-                new Category {Name = "Elektronik", Description = "Elektronik"},
-            };
-            return View(categories);
+                ViewBag.SelectedCategory = RouteData?.Values["id"];
+            }
 
+
+            return View(CategoryRepository.Categories);
         }
     }
 }

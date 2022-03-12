@@ -1,9 +1,9 @@
+using System.ComponentModel.DataAnnotations;
+
 namespace ShopApp.UI.Models
 {
     public class Product
     {
-        public string Name { get; set; }
-        public double Price { get; set; }
-        public string Description { get; set; }
+      
     }
 }
